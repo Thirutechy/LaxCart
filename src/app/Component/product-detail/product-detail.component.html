@@ -1,0 +1,35 @@
+
+<!-- single product display -->
+<div class="container">
+    
+    <div class="row product-detail">
+        <div class="col-sm-3">
+            <img src="{{productdata?.images[0]}}" alt="" class="product-img">
+        
+            <div>
+                <!-- <button class="btn btn-primary">Buy Now</button>&nbsp; &nbsp; -->
+                <button (click)="addtocart(productdata)" *ngIf="showadd" class="btn btn-success">Add to Cart</button>
+                <button (click)="removeItem(productdata)" *ngIf="showremove" class="btn btn-info">Remove Item</button>
+            </div>
+        </div>
+   
+
+
+<!-- right side -->
+
+<div class="col-sm-8">
+    <div>
+        <h1>{{productdata?.title}}</h1>
+        <b><p style="color: green;">Special Price</p></b>
+        <h3>Price:&nbsp;${{productdata?.price}}</h3>
+        <strong>Category:&nbsp;&nbsp;{{productdata?.category}}</strong><br>
+        <strong>description:</strong><br>
+        <p>{{productdata?.description}}</p>
+        <p style="color:green"><b>Discount :</b> &nbsp;{{productdata?.discountPercentage}}%</p><br>
+        <strong>Stocks : {{productdata?.stock}} Units left</strong><br>
+        <button routerLink="/" class="btn btn-warning text-light mt-2">Back</button>
+
+    </div>
+</div>
+</div>
+</div>
