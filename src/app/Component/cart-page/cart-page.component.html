@@ -18,7 +18,7 @@
                 <td> <img style="width: 120px;" src="{{item.images[0]}}" > </td>
                 <td>{{item.title}}</td>
                 <td>{{item.category}}</td>
-                <td>${{item.price}}</td>
+                <td>&#8377;&nbsp;{{item.price}}</td>
                 <td><button (click)="deleteItem(item)" class="btn btn-danger">Delete</button></td>
               </tr>
             </tbody>
@@ -27,7 +27,7 @@
 
     <div class="col-sm-3">
         <h1>Total Amount</h1>
-        <strong style="font-size: 35px;color: green;">${{totalAmount}}</strong><br>
+        <strong style="font-size: 35px;color: green;">&#8377;&nbsp;{{totalAmount}}</strong><br>
         <div class="btn-group mt-3">
             <button (click)="this.addressForm=true" class="btn btn-primary">Checkout</button>&nbsp;
             <button (click)="Empty()" class="btn btn-secondary">Empty Cart</button>&nbsp;

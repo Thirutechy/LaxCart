@@ -27,7 +27,7 @@
                         <a  class="text-default">{{items.title}}</a>
                     </h6>
                 </div>
-                <h3 class="mb-0 font-weight-semibold">$ {{items.price}}</h3>
+                <h3 class="mb-0 font-weight-semibold">	&#8377;&nbsp;{{items.price}}</h3>
                 <button routerLink="/product-detail/{{items.id}}" class="btn btn-sm btn-dark mt-2"  > <i class="fa fa-solid fa-info mr-2"></i>&nbsp;&nbsp;&nbsp; View Details</button>
                 <button (click)="addtocart(items)" class="btn btn-sm btn-warning mt-2"><i class="fa fa-cart-plus mr-2"></i>&nbsp;&nbsp; Add to Cart</button>&nbsp;
                 <button class="btn btn-sm btn-danger mt-2" (click)="removeItem(items)"><i class="fa fa-remove mr-2"></i>&nbsp; Remove item</button>
